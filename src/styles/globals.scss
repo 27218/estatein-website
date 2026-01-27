@@ -1,0 +1,100 @@
+html {
+	&.is-lock {
+		overflow: hidden; // for BurgerButton menu
+	}
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+
+	@include media(font-size, 18px, 16px, 14px);
+	font-family: var(--font-family-base);
+	font-weight: 500;
+
+	background-color: var(--color-body);
+	color: var(--color-gray-60);
+}
+
+main {
+	flex-grow: 1;
+}
+
+
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	color: var(--color-white);
+	line-height: 1.2;
+}
+
+h1, .h1 {
+	@include media(font-size, 60px, 46px, 28px);
+	font-weight: 600;
+}
+h2, .h2 {
+	@include media(font-size, 48px, 38px, 28px);
+	font-weight: 600;
+}
+h3, .h3 {
+	@include media(font-size, 24px, 20px, 18px);
+	font-weight: 600;
+}
+h4, .h4 {
+	// @include media(font-size, );
+}
+h5, .h5 {
+	// @include media(font-size, );
+}
+h6, .h6 {
+	// @include media(font-size, );
+}
+
+
+
+a,
+label,
+button,
+
+input,
+textarea,
+select,
+
+svg * {
+	transition-duration: var(--transition-duration);
+}
+
+
+
+a {
+	color: inherit;
+
+	@include hover {
+		color: var(--color-purple-75);
+	}
+
+	&[class] {
+		text-decoration: none;
+	}
+}
+
+:focus-visible {
+	outline: 2px dashed var(--color-white);
+	outline-offset: 4px;
+	transition-duration: 0s !important;
+}
+
+b {
+	color: var(--color-white);
+}
+
+
+
+// Fix Swiper's bug (when its wrapper is a flex/grid container)
+:has(.swiper) {
+	min-width: 0;
+}

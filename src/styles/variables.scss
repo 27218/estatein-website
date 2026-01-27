@@ -1,0 +1,38 @@
+:root {
+	--color-purple-60: hsl(257, 92%, 60%);
+	--color-purple-65: hsl(257, 92%, 65%);
+	--color-purple-70: hsl(257, 92%, 70%);
+	--color-purple-75: hsl(257, 92%, 75%);
+	--color-purple-90: hsl(257, 92%, 90%);
+	--color-purple-95: hsl(257, 92%, 95%);
+	--color-purple-97: hsl(257, 92%, 97%);
+	--color-purple-99: hsl(257, 92%, 99%);
+
+	--color-gray-08: hsl(0, 0%, 8%);
+	--color-gray-10: hsl(0, 0%, 10%);
+	--color-gray-15: hsl(0, 0%, 15%);
+	--color-gray-20: hsl(0, 0%, 20%);
+	--color-gray-30: hsl(0, 0%, 30%);
+	--color-gray-40: hsl(0, 0%, 40%);
+	--color-gray-50: hsl(0, 0%, 50%);
+	--color-gray-60: hsl(0, 0%, 60%);
+
+	--color-white-90: hsl(240, 7%, 90%);
+	--color-white-95: hsl(240, 7%, 95%);
+	--color-white-97: hsl(240, 7%, 97%);
+	--color-white-99: hsl(240, 7%, 99%);
+
+	--color-white: #ffffff;
+	--color-black: #000000;
+
+	--color-body: var(--color-gray-08);
+
+	--font-family-base: 'Urbanist', sans-serif;
+	--border: 1px solid var(--color-gray-15);
+
+	--container-width: #{fluid-to-laptop($container-desktop-width, $container-laptop-width)};
+	--container-padding-x: 15px;
+	--section-padding-y: #{fluid(75, 40)};
+
+	--transition-duration: .2s;
+}

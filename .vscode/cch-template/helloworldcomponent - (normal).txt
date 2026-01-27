@@ -1,0 +1,29 @@
+hello world component (none)
+helloworldcomponent (normal)
+hello.world.component (normalDotCase)
+hello-world-component (normalKebabCase)
+hello_world_component (normalSnakeCase)
+
+helloWorldComponent (camelCase)
+HelloWorldComponent (pascalCase)
+HELLOWORLDCOMPONENT (upperCase)
+helloworldcomponent (lowerCase)
+
+hello_world_component (snakeCase)
+hello-world-component (kebabCase)
+hello.world.component (dotCase)
+
+hello-World-Component (camelSnakeCase)
+Hello_World_Component (pascalSnakeCase)
+HELLO_WORLD_COMPONENT (upperSnakeCase)
+hello_world_component (lowerSnakeCase)
+
+hello-World-Component (camelKebabCase)
+Hello-World-Component (pascalKebabCase)
+HELLO-WORLD-COMPONENT (upperKebabCase)
+hello-world-component (lowerKebabCase)
+
+hello.World.Component (camelDotCase)
+Hello.World.Component (pascalDotCase)
+HELLO.WORLD.COMPONENT (upperDotCase)
+hello.world.component (lowerDotCase)

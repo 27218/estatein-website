@@ -1,0 +1,37 @@
+.button {
+	@include media(padding-block, 18px, 14px);
+	@include media(padding-inline, 24px, 20px);
+
+	@include media(border-radius, 10px, 8px);
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+
+	border: var(--border);
+	background-color: var(--color-gray-10);
+	color: var(--color-white);
+
+	&--transparent {
+		background-color: var(--color-gray-08);
+	}
+
+	&--accent {
+		background-color: var(--color-purple-60);
+		border-color: var(--color-purple-60);
+
+		@include hover {
+			opacity: 0.8;
+			scale: 1.05;
+			color: var(--color-white);
+		}
+	}
+
+	@include hover {
+		background-color: var(--color-purple-60);
+		border-color: var(--color-purple-60);
+		scale: 1.05;
+		color: var(--color-white);
+	}
+}

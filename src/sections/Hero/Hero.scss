@@ -1,0 +1,117 @@
+.hero {
+	padding-bottom: var(--section-padding-y);
+
+	&__main {
+		display: grid;
+
+		// Kevin Powell: https://youtu.be/Ivk8Blw2VTI?t=360
+		grid-template-columns:
+			minmax(var(--container-padding-x), 1fr)
+			minmax(0, calc(var(--container-width) / 2))
+			minmax(0, calc(var(--container-width) / 2))
+			minmax(var(--container-padding-x), 1fr);
+		align-items: center;
+
+		@include tablet {
+			display: flex;
+			flex-direction: column-reverse;
+			padding-inline: var(--container-padding-x);
+			gap: 56px;
+
+			padding-block: var(--section-padding-y);
+		}
+	}
+
+	&__body {
+		grid-column: 2;
+		padding-block: 70px;
+
+		display: flex;
+		flex-direction: column;
+		@include media(gap, 60px, 50px, 40px);
+
+		@include tablet-above {
+			padding-right: 40px;
+		}
+	}
+
+
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		@include media(gap, 24px, 20px, 16px);
+
+		padding-right: 60px;
+	}
+
+	&__title {
+		anchor-name: --title;
+	}
+
+	&__actions {
+		display: flex;
+		@include media(gap, 20px, 16px);
+
+		@include tablet {
+			flex-direction: column;
+			margin-inline: auto;
+			max-width: 400px;
+			width: 100%;
+		}
+	}
+
+
+
+
+
+	&__image-wrapper {
+		// On a tablet, the circle (&__link) should be positioned relative to the image, not the title (therefore, anchors are no longer needed and a new 'Containing Block' can be created)
+		@include tablet {
+			position: relative;
+		}
+
+		@include tablet-above {
+			grid-column: 3 / -1;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include tablet {
+			border-radius: 10px;
+			border: var(--border);
+			max-width: 600px;
+			width: 100%;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__link {
+		position: absolute;
+		position-anchor: --title;
+		top: anchor(center);
+
+		translate: -50% -50%;
+
+		@include media(width, 175px, 129px, 117px);
+		@include media(height, 175px, 129px, 117px);
+
+		background: url('/src/assets/images/hero/link.png') center/contain no-repeat;
+
+		@include tablet {
+			top: auto;
+			bottom: 0;
+			translate: -10% 25%;
+		}
+
+		@include hover {
+			scale: 1.05;
+		}
+	}
+}

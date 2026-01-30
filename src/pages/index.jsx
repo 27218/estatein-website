@@ -1,4 +1,5 @@
 import Hero from "@/sections/Hero"
+import Properties from "@/sections/Properties"
 
 export const metadata = {
 	title: 'Home',
@@ -7,5 +8,6 @@ export const metadata = {
 export default () => (
 	<>
 		<Hero />
+		<Properties />
 	</>
 )

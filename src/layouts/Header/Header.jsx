@@ -7,11 +7,13 @@ import Button from '@/components/Button'
 import BurgerButton from '@/components/BurgerButton'
 
 export default ({ url }) => {
+	url = url.slice(1) || 'index'
+
 	const links = [
-		{label: 'Home', href: '/'},
-		{label: 'About Us', href: '/about'},
-		{label: 'Properties', href: '/properties'},
-		{label: 'Services', href: '/services'},
+		{label: 'Home', href: 'index'},
+		{label: 'About Us', href: 'about'},
+		{label: 'Properties', href: 'properties'},
+		{label: 'Services', href: 'services'},
 	]
 
 	return (
@@ -46,7 +48,7 @@ export default ({ url }) => {
 							className="header__button"
 							type="button"
 							label="Contact Us"
-							mode={url === '/contact-us' ? 'accent' : ''}
+							mode={url === 'contact-us' ? 'accent' : ''}
 						/>
 					</dialog>
 

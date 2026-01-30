@@ -7,11 +7,11 @@ export default ({ className }) => {
 	return (
 		<a
 			className={clsx(className, 'logo')}
-			href="/"
+			href=""
 			title={title}
 			aria-label={title}
 		>
-			<img src="/logo.svg" alt="" />
+			<img src="logo.svg" alt="" />
 		</a>
 	)
 }

@@ -3,7 +3,12 @@ import path from 'path'
 
 export default defineConfig({
   root: "",
-  base: "/",
+
+  // For Github pages
+  // 💩 href="/assets/style.css"
+  // 👍 href="assets/style.css"
+  base: "./", 
+
   public: "public",
   out: "dist",
   assets: {

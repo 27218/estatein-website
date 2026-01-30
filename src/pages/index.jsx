@@ -1,9 +1,17 @@
+import Hero from "@/sections/Hero"
+import Properties from "@/sections/Properties"
+import Reviews from "@/sections/Reviews"
+import FAQ from "@/sections/FAQ"
+
 export const metadata = {
 	title: 'Home',
 }
 
 export default () => (
 	<>
-		<h1>hello</h1>
+		<Hero />
+		<Properties />
+		<Reviews />
+		<FAQ />
 	</>
 )

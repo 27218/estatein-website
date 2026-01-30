@@ -1,0 +1,39 @@
+.read-more {
+	position: relative;
+	interpolate-size: allow-keywords;
+	height: fit-content; // to align button with text
+
+	&.is-expanded {
+		.read-more__button {
+			@include hide;
+		}
+
+		.read-more__text {
+			max-height: max-content;
+		}
+	}
+	
+
+
+	&__text {
+		max-height: calc(var(--_lines) * 1.5em);
+		line-height: 1.5em;
+		overflow: hidden;
+
+		transition-duration: .2s;
+	}
+
+	&__button {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		padding: 0 0 0 60px;
+		border: none;
+		background: none;
+		
+		color: var(--color-white);
+		text-decoration: underline;
+		background: linear-gradient(to right, transparent, var(--color-body) 40px);
+	}
+}

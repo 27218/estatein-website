@@ -1,0 +1,82 @@
+.section {
+	padding-block: var(--section-padding-y);
+
+	display: flex;
+	flex-direction: column;
+	@include media(gap, 80px, 60px, 40px);
+
+	&--horizontal {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		align-items: center;
+
+		@include tablet {
+			grid-template-columns: auto;
+			justify-items: center;
+		}
+
+		.section__header {
+			flex-direction: column;
+			@include media(row-gap, 80px, 50px, 40px);
+		}
+	}
+
+	&--even {
+		@include tablet-above {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	&--swap {
+		.section__header {
+			@include tablet {
+				order: 1;
+			}
+		}
+	}
+
+
+
+
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 16px;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		@include media(row-gap, 14px, 10px, 6px);
+
+		position: relative;
+
+		&::before {
+			content: '';
+		
+			position: absolute;
+			top: -40px;
+			left: -20px;
+
+			width: 68px;
+			height: 30px;
+			background: url('/src/assets/images/Section/sparkles.svg') center/cover no-repeat;
+
+			@include laptop {
+				left: -10px;
+			}
+
+			@include mobile {
+				width: 46px;
+				height: 20px;
+				top: -25px;
+			}
+		}
+	}
+
+	&__actions {
+		flex-shrink: 0;
+	}
+}

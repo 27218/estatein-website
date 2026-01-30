@@ -1,0 +1,65 @@
+.links {
+	position: relative; // for outline to be on top of .hero
+
+	border-block: var(--border);
+	@include media(padding, 20px, 10px);
+	box-shadow: 0 0 0 10px var(--color-gray-10);
+
+	@include mobile-s {
+		border: var(--border);
+		border-radius: 12px;
+		margin-inline: 16px;
+	}
+
+	&__list {
+		display: grid;
+		align-items: stretch;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		@include media(gap, 20px, 10px);
+	}
+
+	&__link {
+		height: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		@include media(row-gap, 20px, 16px, 14px);
+
+		border: var(--border);
+		@include media(border-radius, 12px, 10px);
+
+		padding-inline: 10px;
+		@include media(padding-block, 40px, 30px, 20px);
+
+		text-align: center;
+		color: var(--color-white);
+		background-color: var(--color-gray-10);
+
+		position: relative;
+	
+		&::before {
+			content: '';
+			position: absolute;
+			top: 20px;
+			right: 20px;
+
+			aspect-ratio: 1;
+			@include media(width, 34px, 26px);
+
+			background: url('/src/assets/icons/arrow-up-left.svg') center/cover no-repeat;
+		}
+
+		@include hover {
+			background-color: var(--color-gray-15);
+		}
+	}
+
+	&__image {
+		@include media(--_icon-size, 82px, 60px, 48px);
+		color: var(--color-purple-75);
+
+		transition-duration: var(--transition-duration);
+	}
+}
